@@ -41,7 +41,6 @@ pacman -S wireless-regdb \
     bluez-utils \
     dnsmasq \
     networkmanager \
-    weston \
     gamescope \
     gamemode \
     xorg-server \
@@ -54,6 +53,7 @@ pacman -S wireless-regdb \
     kitty-terminfo \
     git \
     wget \
+    unzip \
     flatpak \
     discover \
     fuse \
@@ -150,7 +150,7 @@ systemctl enable NetworkManager &&
 systemctl enable update.service &&
 systemctl enable systemd-timesyncd.service &&
 systemctl enable --global pipewire-pulse &&
-systemctl enable waydroid-container.service
+# systemctl enable waydroid-container.service
 
 
 ##
