@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source /post/config
+
 ## LOCALTIME 
 ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime &&
 hwclock --systohc &&
@@ -170,8 +172,8 @@ chown -R net:net /var/net &&
 passwd net
 
 ## LUKSDISK
-echo "rd.luks.name=$(blkid -s UUID -o value /dev/nvme0n1p3)=root root=/dev/proc/root" > /etc/cmdline.d/01-boot.conf &&
-echo "data UUID=$(blkid -s UUID -o value /dev/nvme0n1p4) none" >> /etc/crypttab 
+echo "rd.luks.name=$(blkid -s UUID -o value $DISKPROC)=root root=/dev/proc/root" > /etc/cmdline.d/01-boot.conf &&
+echo "data UUID=$(blkid -s UUID -o value $DISKDATA) none" >> /etc/crypttab 
 
 ## NOTIF
 echo "
