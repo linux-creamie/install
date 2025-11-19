@@ -80,7 +80,7 @@ mount /dev/data/home /mnt/home &&
 
 mkdir -p /mnt/var/{tmp,log,cache/pacman,lib/telnet,lib/config,lib/hoster,lib/docker} &&
 mount /dev/proc/vtmp /mnt/var/tmp &&
-mount /dev/proc/nets /mnt/var/telnet &&
+mount /dev/proc/nets /mnt/var/lib/telnet &&
 mount /dev/proc/conf /mnt/var/lib/config &&
 mount /dev/data/dock /mnt/var/lib/docker &&
 mount /dev/data/host /mnt/var/lib/hoster &&
