@@ -45,6 +45,7 @@ pacman -S wireless-regdb \
     dnsmasq \
     networkmanager \
     weston \
+    neovim \
     dolphin \
     gamescope \
     gamemode \
