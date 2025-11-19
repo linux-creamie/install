@@ -74,6 +74,7 @@ pacman -S wireless-regdb \
     steam \
     kodi-gles \
     dolphin-emu \
+    firefox \
     kwallet \
     plasma-nm \
     ksshaskpass \
@@ -156,10 +157,11 @@ cd /
 ##
 ## SERVICE
 systemctl enable lightdm &&
-systemctl enable NetworkManager &&
+systemctl enable dnsmasq &&
 systemctl enable update.timer &&
-systemctl enable systemd-timesyncd.service &&
+systemctl enable NetworkManager &&
 systemctl enable --global pipewire-pulse &&
+systemctl enable systemd-timesyncd.service &&
 # systemctl enable waydroid-container.service
 
 
